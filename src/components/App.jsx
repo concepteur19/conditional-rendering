@@ -1,24 +1,16 @@
 import React from "react";
-import Login from "./Login";
+import Form from "./Form";
 
-const isLoggedIn = false;
+let userIsRegistred = false;
 
 function App() {
   return (
     <div className="container">
-      { isLoggedIn ? <h1>Hello</h1> : <Login className="form" /> }
+      <Form 
+        isRegistered = { userIsRegistred }
+      />
     </div>
   );
 }
 
-export default App;
-
-// function renderHorForm() {
-//   if (isLoggedIn) {
-//     return <h1>Hello</h1>
-//   } else {
-//     return (
-//       <Login className="form"/>
-//     )
-//   }
-// }
+export default App; 
